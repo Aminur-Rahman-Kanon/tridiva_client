@@ -1,0 +1,19 @@
+.navbarContainer {
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navLink {
+    font-size: 0.9rem;
+    margin: 0 5px;
+    color: lightgray;
+    text-decoration: none;
+    transition: color 0.5s linear;
+}
+
+.navLink:hover {
+    color: white;
+}
