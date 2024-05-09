@@ -1,0 +1,129 @@
+/* background_color: #4c4c4c */
+/* icon_background_color: #e9e9e9 */
+/* logo_bg: #6a6a6a */
+
+
+.footerContainer {
+    width: 100%;
+    margin-top: 50px;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4c4c4c;
+}
+
+.topContainer {
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: #817f7f;
+    border-radius: 10px;
+}
+
+.bottomContainer {
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.bottomItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.item {
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.iconContainer {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9e9e9;
+    margin-right: 10px;
+}
+
+.icon {
+    font-size: 20px;
+    color: #4c4c4c;
+}
+
+.text {
+    font-size: 0.9rem;
+    color: lightgray;
+}
+
+.bottomItem {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.headerWhite {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 10px 0;
+    color: white;
+    /* letter-spacing: 1px; */
+}
+
+.socialLinkContainer {
+    display: flex;
+    margin-top: 20px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.socialLink {
+    text-decoration: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.socialLink:nth-of-type(1) {
+    background-color: #3B5998;
+}
+
+.socialLink:nth-of-type(2) {
+    background-color: #0077B5;
+}
+
+.socialLink:nth-of-type(3) {
+    background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7)
+}
+
+.socialLink:nth-of-type(4) {
+    background-color: #1DA1F2;
+}
+
+.socialLinkIcon {
+    font-size: 20px;
+    color: white;
+}

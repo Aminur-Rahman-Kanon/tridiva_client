@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import introBg from '../../Assets/others/intro_bg.jpg';
 import outroBg from '../../Assets/others/outro_bg.jpg';
 import OurServices from '../../Components/OurServices/ourServices';
+import WhyChooseUs from '../../Components/WhyChooseUs/whyChooseUs';
 
 const Homepage = () => {
     return (
@@ -50,6 +51,9 @@ const Homepage = () => {
                 <div className={styles.introBgContainer}>
                     <img src={outroBg} alt='tridiva it' className={styles.outroBg} />
                 </div>
+            </div>
+            <div className={styles.wrapper}>
+                <WhyChooseUs />
             </div>
         </div>
     )
