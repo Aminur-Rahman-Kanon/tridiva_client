@@ -6,6 +6,7 @@ import introBg from '../../Assets/others/intro_bg.jpg';
 import outroBg from '../../Assets/others/outro_bg.jpg';
 import OurServices from '../../Components/OurServices/ourServices';
 import WhyChooseUs from '../../Components/WhyChooseUs/whyChooseUs';
+import Testimonial from '../../Components/Testimonial/Main/main';
 
 const Homepage = () => {
     return (
@@ -54,6 +55,10 @@ const Homepage = () => {
             </div>
             <div className={styles.wrapper}>
                 <WhyChooseUs />
+            </div>
+
+            <div className={styles.testimonialWrapper}>
+                <Testimonial />
             </div>
         </div>
     )

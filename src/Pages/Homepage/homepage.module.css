@@ -274,3 +274,11 @@
     justify-content: center;
     align-items: center;
 }
+
+.testimonialWrapper {
+    width: calc(100% - 300px);
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
