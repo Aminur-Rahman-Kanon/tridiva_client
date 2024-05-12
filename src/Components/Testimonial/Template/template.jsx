@@ -3,9 +3,6 @@ import styles from './template.module.css';
 import Rating from '../Rating/rating';
 
 const Template = ({ profile }) => {
-
-    if (!Object.keys(profile)) return;
-
     return (
         <div className={styles.templateWrapper}>
             <div className={styles.outerBox}></div>

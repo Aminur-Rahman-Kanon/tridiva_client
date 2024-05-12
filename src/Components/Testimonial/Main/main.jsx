@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './main.module.css';
 import Template from '../Template/template';
+import SliderComponent from '../../SliderComponent/sliderComponent';
 import { testimonial } from '../../../Data/data';
 
 const Testimonial = () => {
 
-    if (!testimonial) return;
+    const displaySlider = testimonial.map(slr => <Template profile={slr}/>)
 
     return (
         <section className={styles.main}>
@@ -14,10 +15,7 @@ const Testimonial = () => {
                 <title className={styles.title2}>Testimonial</title>
             </div>
             <div className={styles.testimonial}>
-                {
-                    <Template profile={testimonial[0]}/>
-                    // testimonial.map(item => <Template key={item.id} profile={item} />)
-                }
+                <SliderComponent item={displaySlider} />
             </div>
         </section>
     )

@@ -1,9 +1,7 @@
 .main {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    box-sizing: border-box;
 }
 
 .titleWrapper {
@@ -23,16 +21,26 @@
 }
 
 .title2 {
+    position: relative;
     display: block;
     font-size: 2rem;
     font-weight: 500;
     color: white;
 }
 
+.title2::after {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    content: '';
+    width: 70%;
+    height: 3px;
+    border-radius: 50%;
+    background-color: white;
+}
+
 .testimonial {
     width: 100%;
     margin: 50px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
