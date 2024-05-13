@@ -14,14 +14,14 @@ const Rating = ({ rating }) => {
     let displayRating;
 
     if (!inActiveRating) {
-        displayRating = Array.from(Array(activeRating)).map((str, idx) => <div className={styles.rating}>
+        displayRating = Array.from(Array(activeRating)).map((str, idx) => <div key={idx} className={styles.rating}>
             <FontAwesomeIcon icon={faStar} className={`${styles.star} ${styles.activeStar}`} />
         </div>)
     }
     else {
         displayRating = Array.from(Array(activeRating)).map((str, idx) => <div key={idx} className={styles.rating}>
             <FontAwesomeIcon icon={faStar} className={`${styles.star} ${styles.activeStar}`} />
-        </div>).concat(Array.from(Array(inActiveRating)).map((str, idx) => <div key={idx} className={styles.rating}>
+        </div>).concat(Array.from(Array(inActiveRating)).map((str, idx) => <div key={idx + 5} className={styles.rating}>
             <FontAwesomeIcon icon={faStar} className={styles.star} />            
         </div>))
     }

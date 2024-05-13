@@ -6,7 +6,7 @@ import { testimonial } from '../../../Data/data';
 
 const Testimonial = () => {
 
-    const displaySlider = testimonial.map(slr => <Template profile={slr}/>)
+    const displaySlider = testimonial.map(slr => <Template key={slr.id} profile={slr}/>)
 
     return (
         <section className={styles.main}>

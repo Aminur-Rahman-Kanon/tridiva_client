@@ -17,3 +17,16 @@
 .navLink:hover {
     color: white;
 }
+
+@media (max-width: 1024px) {
+    .navbarContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .navLink {
+        font-size: 1.2rem;
+        margin: 5px 0;
+    }
+}

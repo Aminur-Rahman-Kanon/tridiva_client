@@ -1,0 +1,37 @@
+.container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.drawtoggleWrapper {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(108, 108, 108);
+    transition: all 0.8s ease;
+    cursor: pointer;
+}
+
+.drawtoggle {
+    font-size: 18px;
+    color: white;
+    transition: color 0.8s ease;
+}
+
+.drawtoggleWrapper:hover {
+    background-color: white;
+}
+
+.drawtoggleWrapper:hover .drawtoggle {
+    color: rgb(108, 108, 108);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        display: flex;
+    }
+}

@@ -302,13 +302,18 @@
     }
 
     .introHeadingContainer, .outroHeadingContainer {
-        width: 100%;
+        width: 95%;
+        box-sizing: border-box;
         margin: 25px auto;
         align-items: center;
         padding-right: unset;
     }
 
     .headingBlue {
+        text-align: center;
+    }
+
+    .headingGreen {
         text-align: center;
     }
 

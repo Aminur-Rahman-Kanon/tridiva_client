@@ -18,8 +18,13 @@
     justify-content: space-between;
     align-items: center;
 }
+
 @media (max-width: 1023px) {
     .topbarContainer {
+        /* display: none; */
+    }
+
+    .element3, .element2 {
         display: none;
     }
 }
