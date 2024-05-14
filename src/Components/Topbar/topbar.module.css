@@ -19,9 +19,13 @@
     align-items: center;
 }
 
+.element1 {
+    display: none;
+}
+
 @media (max-width: 1023px) {
-    .topbarContainer {
-        /* display: none; */
+    .element1 {
+        display: flex;
     }
 
     .element3, .element2 {
