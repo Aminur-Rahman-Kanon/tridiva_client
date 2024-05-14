@@ -16,7 +16,7 @@ const OurServices = () => {
     
     return (
         <div className={styles.ourServicesContainer}>
-            <h2 className={styles.headingWhite}>Our Services</h2>
+            <h2 className={styles.headingWhite}>what we do</h2>
             <div className={styles.itemContainer}>
                 <div className={styles.item}>
                     <div data-aos='fade-right' className={styles.headerContainer}>

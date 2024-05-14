@@ -292,7 +292,7 @@
     }
     .introContainer, .outroContainer {
         flex-direction: column-reverse;
-        width: 100%;
+        width: calc(100% - 150px);
     }
 
     .introBgContainer {
@@ -302,19 +302,16 @@
     }
 
     .introHeadingContainer, .outroHeadingContainer {
-        width: 95%;
+        width: 100%;
         box-sizing: border-box;
         margin: 25px auto;
         align-items: center;
         padding-right: unset;
     }
 
-    .headingBlue {
+    .headingBlue, .headingGreen {
         text-align: center;
-    }
-
-    .headingGreen {
-        text-align: center;
+        font-size: 1.5rem;
     }
 
     .textWhite {
@@ -330,6 +327,21 @@
     }
 
     .testimonialWrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .introContainer, .outroContainer {
+        width: calc(100% - 75px);
+    }
+
+    .introLink {
+        width: 100%;
+    }
+
+    .outroLink {
         width: 100%;
     }
 }

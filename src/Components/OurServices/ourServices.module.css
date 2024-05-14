@@ -12,11 +12,11 @@
     font-weight: 500;
     color: white;
     letter-spacing: 1px;
+    text-transform: capitalize;
 }
 
 .itemContainer {
     width: 100%;
-    /* margin-top: 20px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -192,7 +192,7 @@
 
 @media (max-width: 1024px) {
     .ourServicesContainer {
-        width: 100%;
+        width: calc(100% - 150px);
     }
     
     .item, .item:nth-of-type(even) {
@@ -240,5 +240,24 @@
 
     .textWhite {
         text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .ourServicesContainer {
+        width: calc(100% - 75px);
+        margin: 20px auto;
+    }
+
+    .headerContainer {
+        margin-top: 20px;
+    }
+
+    .item {
+        margin: 20px auto;
+    }
+
+    .linkBlue, .linkGreen {
+        width: calc(100% - 5px);
     }
 }
