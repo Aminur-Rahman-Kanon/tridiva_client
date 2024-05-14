@@ -464,7 +464,7 @@
 
     .el2IconsMain {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: unset;
         margin: auto;
         /* margin-top: 25px; */
     }
