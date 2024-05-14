@@ -530,6 +530,10 @@
         margin: 10px 0;
     }
 
+    .el2IconContainer {
+        height: auto;
+    }
+
     .card {
         width: 100px;
         height: 110px;
