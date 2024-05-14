@@ -469,6 +469,10 @@
         /* margin-top: 25px; */
     }
 
+    .textWhiteSmal  {
+        margin-top: 10px;
+    }
+
     .element3Container, .element4Container1, .element4Container, .element5Container {
         width: calc(100% - 75px);
         margin: 25px auto;
