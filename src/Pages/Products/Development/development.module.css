@@ -459,7 +459,7 @@
 
     .element2Container {
         width: calc(100% - 75px);
-        margin: 25px auto;
+        margin: auto;
     }
 
     .el2IconsMain {
@@ -521,13 +521,14 @@
     }
 
     .cards {
-        padding: 10px;
+        padding: unset;
         margin: 10px 0;
     }
 
     .card {
         width: 100px;
         height: 110px;
+        margin: 10px;
     }
 
     .iconContainer {
