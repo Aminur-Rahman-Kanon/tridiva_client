@@ -7,6 +7,7 @@ import Homepage from './Pages/Homepage/homepage';
 import Footer from './Components/Footer/footer';
 import Sidedrawer from './Components/Sidedrawer/sidedrawer';
 import ProductPage from './Pages/Products/Development/development';
+import Pricing from './Pages/Pricing/pricing';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Homepage />}/>
             <Route path='/service/:serviceId' element={<ProductPage />} />
+            <Route path='/pricing' element={<Pricing />} />
           </Routes>
           <Footer />
         </ContextApi.Provider>

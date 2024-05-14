@@ -109,11 +109,11 @@
     width: 100%;
     height: 100%;
     max-width: 1440px;
-    padding: 50px 0;
+    margin: 50px auto;
     display: grid;
     box-sizing: border-box;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-gap: 20px;
     justify-content: center;
     align-items: start;
 }
@@ -466,8 +466,7 @@
 
     .el2IconsMain {
         grid-template-columns: repeat(2, 1fr);
-        gap: unset;
-        padding: 25px 0;
+        grid-gap: 10px;
     }
 
     .textWhiteSmal  {
