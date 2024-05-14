@@ -115,7 +115,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
 
 .el2IconContainer {
