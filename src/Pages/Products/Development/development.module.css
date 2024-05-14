@@ -462,7 +462,7 @@
     .el2IconsMain {
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
-        margin: 25px auto;
+        margin-top: 25px;
     }
 
     .element3Container, .element4Container1, .element4Container, .element5Container {
