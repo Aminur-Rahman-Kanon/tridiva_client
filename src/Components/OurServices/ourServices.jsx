@@ -35,7 +35,7 @@ const OurServices = () => {
                     <div data-aos='fade-left' className={styles.headerContainer}>
                         <h2 className={styles.headingBlue}>Website Redesign</h2>
                         <p className={styles.textWhite}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                        <Link to='#' className={styles.linkBlue}>
+                        <Link to='/service/web-development' className={styles.linkBlue}>
                             <span className={styles.linkBlueSlider}></span>
                             <span className={styles.linkBlueText}>Find Out More</span>
                         </Link>
@@ -48,7 +48,7 @@ const OurServices = () => {
                     <div data-aos='fade-right' className={styles.headerContainer}>
                         <h2 className={styles.headingGreen}>Bug Fixing</h2>
                         <p className={styles.textWhite}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                        <Link to='#' className={styles.linkGreen}>
+                        <Link to='/service/web-development' className={styles.linkGreen}>
                             <span className={styles.linkGreenSlider}></span>
                             <span className={styles.linkGreenText}>Find Out More</span>
                         </Link>
@@ -61,7 +61,7 @@ const OurServices = () => {
                     <div data-aos='fade-left' className={styles.headerContainer}>
                         <h2 className={styles.headingBlue}>Digital Marketing</h2>
                         <p className={styles.textWhite}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                        <Link to='#' className={styles.linkBlue}>
+                        <Link to='/service/web-development' className={styles.linkBlue}>
                             <span className={styles.linkBlueSlider}></span>
                             <span className={styles.linkBlueText}>Find Out More</span>
                         </Link>

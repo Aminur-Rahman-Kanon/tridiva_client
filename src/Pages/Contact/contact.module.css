@@ -1,0 +1,352 @@
+.container {
+    width: calc(100% - 300px);
+    margin: 100px auto 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer {
+    width: 100%;
+    margin: 50px auto;
+    padding: 20px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.headerWhite {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: white;
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+
+
+.textWhite {
+    width: 100%;
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    margin: 5px 0;
+}
+
+.el5TextWhite {
+    width: 100%;
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    margin: 5px 0;
+}
+
+.phoneLinkContainer {
+    width: 100%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.phoneWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    background-color: rgba(106, 105, 105, 0.605);
+    transition: background-color 0.5s ease-out;
+}
+
+.phoneIconWrapper {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    transition: all 0.5 ease-out;
+}
+
+.phoneIcon {
+    font: 1rem;
+    color: rgb(32, 32, 32);
+    transition: color 0.5s ease-out;
+}
+
+.phoneText {
+    color: white;
+    font-size: 0.8rem;
+    transition: color 0.5s  ease-out;
+}
+
+.phoneLinkContainer:hover .phoneWrapper {
+    background-color: white;
+}
+
+.phoneLinkContainer:hover .phoneIconWrapper {
+    background-color: rgb(32, 32, 32);
+}
+
+.phoneLinkContainer:hover .phoneIcon {
+    color: white;
+}
+
+.phoneLinkContainer:hover .phoneText {
+    color: rgb(32, 32, 32);
+}
+
+.formWrapper {
+    width: 45%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #4e4e4e;
+}
+
+.inputWrapper {
+    width: 100%;
+    height: 40px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    width: 100%;
+    font-size: 0.8rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.input::placeholder {
+    color: white;
+}
+
+.textareaWrapper {
+    width: 100%;
+    height: auto;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 0.8rem;
+    resize: none;
+}
+
+.textarea::placeholder {
+    color: white;
+}
+
+.submitBtn {
+    position: relative;
+    width: 175px;
+    height: 40px;
+    border: 1px solid #0da03e;
+    background-color: transparent;
+    color: #0da03e;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.btnSlider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #0da03e;
+    transition: width 0.5s ease;
+}
+
+.btnText {
+    font-size: 0.9rem;
+    transition: color 0.5s ease;
+    z-index: 1;
+    text-transform: capitalize;
+}
+
+.submitBtn:hover .btnSlider {
+    width: 100%;
+}
+
+.submitBtn:hover .btnText {
+    color: white;
+}
+
+.element5Container {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.headerSmall {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    text-transform: capitalize;
+}
+
+.headerExSmall {
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+}
+
+.linkBlue {
+    position: relative;
+    width: 200px;
+    height: 40px;
+    margin: 50px 0;
+    border: 1px solid #0099c2;
+    background-color: transparent;
+    color: #0099c2;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.linkBlueSlider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: #0099c2;
+    width: 0;
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+.linkText {
+    z-index: 1;
+    text-transform: capitalize;
+}
+
+.linkBlue:hover {
+    color: white;
+}
+
+.linkBlue:hover .linkBlueSlider {
+    width: 100%;
+}
+
+@media (max-width: 1023px) {
+    .container {
+        width: calc(100% - 150px);
+    }
+
+    .formContainer {
+        flex-direction: column;
+    }
+
+    .headerContainer, .formWrapper {
+        width: 100%;
+        margin: 50px auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: calc(100% - 75px);
+    }
+
+    .headerContainer {
+        margin: 25px auto;
+        align-items: center;
+    }
+
+    .phoneLinkContainer {
+        justify-content: center;
+    }
+    
+    .formContainer {
+        margin: 25px auto;
+    }
+
+    .formWrapper {
+        margin: 25px auto;
+    }
+
+    .element5Container {
+        margin: 25px auto;
+    }
+
+    .headerWhite {
+        font-size: 2rem;
+    }
+
+    .headerSmall {
+        font-size: 1.2rem;
+    }
+
+    .textWhite {
+        text-align: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .container {
+        width: calc(100% - 37.5px);
+    }
+}
