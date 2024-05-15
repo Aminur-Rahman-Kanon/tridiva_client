@@ -43,39 +43,45 @@ const Development = () => {
                     <h2 className={styles.bannerHeaderWhite}>We dont just design website we design solutions</h2>
                 </div>
             </div>
-            <div className={styles.element2Container}>
-                <h2 className={styles.headerWhiteLargeUnderline}>What we do</h2>
-                <div className={styles.textContainer}>
-                    <span className={styles.textWhite}>The engineering excellence of the door means that although the face a are among the
-                        slimmest available on the market with a newly reduced typical sight line of just 90mm, the
-                        frames are incredibly strong, which ensures that each individual exterior bi-fold door panel
-                        can go up to an industry leading 1500mm wide as well as up to 3300 mm high.
-                    </span>
-                </div>
-                <div className={styles.el2IconsMain}>
-                    <div className={styles.el2IconContainer}>
-                        <div className={styles.el2IconWrapper}>
-                            <img src={mobile} alt='tridiva it' className={styles.el2Icon} />
+            <div className={styles.element2Main}>
+                <h2 className={styles.headerUnderline}>what we do</h2>
+                <p className={styles.el2textWhite}>The engineering excellence of the door means that although the face a are among the slimmest available on the market with a newly reduced typical sight line of just 90mm, the frames are incredibly strong, which ensures that each individual exterior bi-fold door panel can go up to an industry leading 1500mm wide as well as up to 3300 mm high.</p>
+                <div className={styles.el2CardContainer}>
+                    <div className={styles.el2Group}>
+                        <div className={styles.el2Card}>
+                            <div className={styles.cardIconContainer}>
+                                <img src={mobile} alt="tridiva it" className={styles.cardIcon}/>
+                            </div>
+                            <div className={styles.cardTextContainer}>
+                                <span className={styles.el2TextSmall}>mobile approach first</span>
+                            </div>
                         </div>
-                        <span className={styles.textWhiteSmal}>mobile approach first</span>
+                        <div className={styles.el2Card}>
+                            <div className={styles.cardIconContainer}>
+                                <img src={responsive} alt="tridiva it" className={styles.cardIcon}/>
+                            </div>
+                            <div className={styles.cardTextContainer}>
+                                <span className={styles.el2TextSmall}>fully responsive</span>
+                            </div>
+                        </div>
                     </div>
-                    <div className={styles.el2IconContainer}>
-                        <div className={styles.el2IconWrapper}>
-                            <img src={responsive} alt='tridiva it' className={styles.el2Icon} />
+                    <div className={styles.el2Group}>
+                        <div className={styles.el2Card}>
+                            <div className={styles.cardIconContainer}>
+                                <img src={agile} alt="tridiva it" className={styles.cardIcon}/>
+                            </div>
+                            <div className={styles.cardTextContainer}>
+                                <span className={styles.el2TextSmall}>agile development process</span>
+                            </div>
                         </div>
-                        <span className={styles.textWhiteSmal}>full responsive</span>
-                    </div>
-                    <div className={styles.el2IconContainer}>
-                        <div className={styles.el2IconWrapper}>
-                            <img src={agile} alt='tridiva it' className={styles.el2Icon} />
+                        <div className={styles.el2Card}>
+                            <div className={styles.cardIconContainer}>
+                                <img src={award} alt="tridiva it" className={styles.cardIcon}/>
+                            </div>
+                            <div className={styles.cardTextContainer}>
+                                <span className={styles.el2TextSmall}>high quality content</span>
+                            </div>
                         </div>
-                        <span className={styles.textWhiteSmal}>agile development proocess</span>
-                    </div>
-                    <div className={styles.el2IconContainer}>
-                        <div className={styles.el2IconWrapper}>
-                            <img src={award} alt='tridiva it' className={styles.el2Icon} />
-                        </div>
-                        <span className={styles.textWhiteSmal}>high quality content</span>
                     </div>
                 </div>
             </div>

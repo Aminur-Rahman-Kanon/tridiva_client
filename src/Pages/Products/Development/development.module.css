@@ -50,16 +50,6 @@
     text-transform: capitalize;
 }
 
-.element2Container {
-    width: calc(100% - 300px);
-    height: 100%;
-    margin: 50px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .headerWhiteLarge {
     position: relative;
     font-size: 2rem;
@@ -105,53 +95,97 @@
     text-align: center;
 }
 
-.el2IconsMain {
-    width: 100%;
-    height: 100%;
-    max-width: 1440px;
+.element2Main {
+    width: calc(100% - 300px);
     margin: 50px auto;
-    display: grid;
-    box-sizing: border-box;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-    justify-content: center;
-    align-items: start;
-}
-
-.el2IconContainer {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
-.el2IconWrapper {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: lightgrey;
+.headerUnderline {
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.el2textWhite {
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+    margin: 50px auto;
+    text-align: center;
+
+}
+
+.el2CardContainer {
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     overflow: hidden;
+}
+
+.el2Group {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.el2Card {
+    width: 150px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cardIconContainer {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    border-radius: 50%;
+}
+
+.cardIcon {
+    width: 50px;
+    height: 50px;
+}
+
+.cardTextContainer {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.el2Icon {
-    width: 40px;
-    height: 40px;
+.el2TextSmall {
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
 }
 
-.textWhiteSmal {
-    display: block;
-    width: 100%;
-    font-size: 1rem;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-    margin: 20px 0;
-    text-transform: capitalize;
+.headerUnderline::after {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    content: '';
+    width: 65%;
+    height: 3px;
+    background-color: white;
+    border-radius: 20px;
 }
 
 .element3Container {
@@ -397,8 +431,17 @@
         text-align: center;
     }
 
-    .element2Container {
+    .element2Main {
         width: calc(100% - 150px);
+    }
+
+    .el2CardContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .el2Group {
+        width: 100%;
     }
 
     .element3Container {
@@ -459,22 +502,16 @@
         font-size: 2.2rem;
     }
 
-    .element2Container {
-        width: calc(100% - 75px);
-        margin: auto;
-    }
-
-    .el2IconsMain {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 10px;
-    }
-
     .textWhiteSmal  {
         margin-top: 10px;
     }
 
-    .element3Container, .element4Container1, .element4Container, .element5Container {
+    .element2Main .element3Container, .element4Container1, .element4Container, .element5Container {
         width: calc(100% - 75px);
+        margin: 25px auto;
+    }
+
+    .el2textWhite, .el2CardContainer {
         margin: 25px auto;
     }
 
@@ -494,18 +531,8 @@
 }
 
 @media (max-width: 450px) {
-    .element2Container, .element3Container, .element4Container, .element4Container1, .element5Container {
+    .element2Main, .element3Container, .element4Container, .element4Container1, .element5Container {
         width: calc(100% - 37.5px);
-    }
-
-    .el2IconWrapper {
-        width: 65px;
-        height: 65px;
-    }
-
-    .el2Icon {
-        width: 30px;
-        height: 30px;
     }
 
     .textWhiteSmal, .textWhite {
@@ -527,10 +554,6 @@
     .cards {
         padding: unset;
         margin: 10px 0;
-    }
-
-    .el2IconContainer {
-        height: auto;
     }
 
     .card {
