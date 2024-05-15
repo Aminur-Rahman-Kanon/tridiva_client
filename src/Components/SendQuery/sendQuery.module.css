@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
 .iconContainer {
@@ -13,14 +14,25 @@
     justify-content: center;
     align-items: center;
     margin-right: 5px;
+    transition: backgound-color 0.5s ease;
 }
 
 .icon {
     font-size: 0.8rem;
     color: white;
+    transition: color 0.5s ease;
 }
 
 .text {
     font-size: 0.8rem;
     color: lightgray;
+    transition: color 0.5s ease;
+}
+
+.sendQueryContainer:hover .iconContainer {
+    background-color: white;
+}
+
+.sendQueryContainer:hover .icon {
+    color: #0099c2;
 }

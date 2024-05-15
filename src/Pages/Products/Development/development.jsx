@@ -31,6 +31,10 @@ const Development = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
+        const header = document.getElementById('header-white');
+        if (header){
+            header.className = `${styles.bannerHeaderWhite} ${styles.animate}`;
+        }
     }, [])
     
     return (
@@ -40,7 +44,7 @@ const Development = () => {
                     <video src={banner} type='video/mp4' autoPlay muted loop playsInline className={styles.video}></video>
                 </div>
                 <div className={styles.headerContainer}>
-                    <h2 className={styles.bannerHeaderWhite}>We dont just design website we design solutions</h2>
+                    <h2 className={styles.bannerHeaderWhite} id="header-white">We dont just design website we design solutions</h2>
                 </div>
             </div>
             <div className={styles.element2Main}>

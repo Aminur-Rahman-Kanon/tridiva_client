@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import ContextApi from './Components/ContextApi/contextApi';
 import './App.css';
@@ -6,8 +6,10 @@ import Topbar from './Components/Topbar/topbar';
 import Homepage from './Pages/Homepage/homepage';
 import Footer from './Components/Footer/footer';
 import Sidedrawer from './Components/Sidedrawer/sidedrawer';
-import ProductPage from './Pages/Products/Development/development';
-import Pricing from './Pages/Pricing/pricing';
+import Spinner from './Components/Spinner/spinner';
+const ProductPage = lazy(() => import('./Pages/Products/Development/development'));
+const Contact = lazy(() => import('./Pages/Contact/contact'));
+const Pricing = lazy(() => import('./Pages/Pricing/pricing'));
 
 function App() {
 
@@ -26,8 +28,15 @@ function App() {
           <Sidedrawer sidedrawer={sidedrawer} />
           <Routes>
             <Route path='/' element={<Homepage />}/>
-            <Route path='/service/:serviceId' element={<ProductPage />} />
-            <Route path='/pricing' element={<Pricing />} />
+            <Route path='/service/:serviceId' element={<Suspense fallback={<Spinner load={true} />}>
+              <ProductPage />
+            </Suspense>} />
+            <Route path='/pricing' element={<Suspense fallback={<Spinner load={true} />}>
+              <Pricing />
+            </Suspense>} />
+            <Route path='/contact' element={<Suspense fallback={<Spinner load={true} />}>
+              <Contact />
+            </Suspense>}/>
           </Routes>
           <Footer />
         </ContextApi.Provider>

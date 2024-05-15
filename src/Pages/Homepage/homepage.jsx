@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './homepage.module.css';
 import banner from '../../Assets/videos/banner1.mp4';
 import { Link } from 'react-router-dom';
@@ -9,6 +9,17 @@ import WhyChooseUs from '../../Components/WhyChooseUs/whyChooseUs';
 import Testimonial from '../../Components/Testimonial/Main/main';
 
 const Homepage = () => {
+
+    const headerAnimation = (el, styles) => {
+        el.className = `${styles.headingWhite} ${styles.animate}`
+    }
+
+    useEffect(() => {
+        const header = document.getElementById('header-white');
+        headerAnimation(header, styles);
+        
+    }, []);
+
     return (
         <div className={styles.homepageContainer}>
             <div className={styles.bannerContainer}>
@@ -16,9 +27,9 @@ const Homepage = () => {
                     <video src={banner} type='video/mp4' width={'100%'} playsInline autoPlay muted loop className={styles.video}></video>
                 </div>
                 <div className={styles.headerContainer}>
-                    <h2 className={styles.headingWhite}>Building Digital Product, Brand and Experience</h2>
+                    <h2 className={styles.headingWhite} id='header-white'>Building Digital Product, Brand and Experience</h2>
                     <p className={styles.textWhite}>More Than 10 Years of Experience in Digital Marketing</p>
-                    <Link to='#' className={styles.link}>
+                    <Link to='/service/web-development' className={styles.link}>
                         <span className={styles.linkSlider}></span>
                         <span className={styles.linkText}>Get Started</span>
                     </Link>
@@ -28,7 +39,7 @@ const Homepage = () => {
                 <div className={styles.introHeadingContainer}>
                     <h2 className={styles.headingBlue}>We've been transforming companies through design innovation since 2014</h2>
                     <p className={styles.introTextWhite}>Elevate your brand with our cutting-edge branding and web design services. We specialise in creating visually stunning and strategically impactful designs that resonate with your target audience.</p>
-                    <Link to='#' className={styles.introLink}>
+                    <Link to='/service/web-development' className={styles.introLink}>
                         <span className={styles.introLinkSlider}></span>
                         <span className={styles.introLinkText}>Explore More</span>
                     </Link>
@@ -44,7 +55,7 @@ const Homepage = () => {
                 <div className={styles.outroHeadingContainer}>
                     <h2 className={styles.headingGreen}>Lets Build Something Extraordinary</h2>
                     <p className={styles.introTextWhite}>Elevate your brand with our cutting-edge branding and web design services. We specialise in creating visually stunning and strategically impactful designs that resonate with your target audience.</p>
-                    <Link to='#' className={styles.outroLink}>
+                    <Link to={'/contact'} className={styles.outroLink}>
                         <span className={styles.outroLinkSlider}></span>
                         <span className={styles.outroLinkText}>Lets Talk</span>
                     </Link>

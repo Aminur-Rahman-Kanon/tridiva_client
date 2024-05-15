@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from './pricing.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faX } from '@fortawesome/free-solid-svg-icons';
@@ -147,6 +148,23 @@ const Pricing = () => {
                         <span className={styles.btnText}>Choose Plan</span>
                     </button>
                 </div>
+            </div>
+            <div className={styles.element5Container}>
+                <h3 className={styles.headerSmall}>looking for something else?</h3>
+                <h2 className={styles.headerWhiteLarge}>are you looking for someone to build a professional website for your company or youeself?</h2>
+                <h3 className={styles.headerSmall}>we got you covered. our talented professional team are always ready for you here</h3>
+                <Link to={''} className={styles.linkBlue}>
+                    <span className={styles.linkBlueSlider}></span>
+                    <span className={styles.linkText}>get a quote</span>
+                </Link>
+            </div>
+            <div className={styles.element5Container}>
+                <h3 className={styles.headerSmall}>let's talk</h3>
+                <h2 className={styles.headerWhiteLarge}>our talented professional team are always here to hear from you.</h2>
+                <Link to={'/contact'} className={styles.linkGreen}>
+                    <span className={styles.linkGreenSlider}></span>
+                    <span className={styles.linkText}>contact us</span>
+                </Link>
             </div>
         </div>
     )
