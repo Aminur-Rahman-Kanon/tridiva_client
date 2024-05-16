@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styles from './drawtoggle.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
+import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 import ContextApi from '../ContextApi/contextApi';
 
 const Drawtoggle = () => {
@@ -13,7 +13,7 @@ const Drawtoggle = () => {
     return (
         <div className={styles.container} onClick={toggleHandler}>
             <div className={styles.drawtoggleWrapper}>
-                <FontAwesomeIcon icon={faEllipsis} className={styles.drawtoggle} />
+                <FontAwesomeIcon icon={faBarsStaggered} className={styles.drawtoggle} />
             </div>
         </div>
     )

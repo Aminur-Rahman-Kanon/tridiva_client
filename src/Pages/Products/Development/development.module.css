@@ -51,7 +51,7 @@
     letter-spacing: 1px;
     color: white;
     text-transform: capitalize;
-    transition: all 1.5s linear;
+    transition: all 3.8s linear;
 }
 
 .bannerHeaderWhite.animate {
@@ -147,7 +147,7 @@
 }
 
 .el2Card {
-    width: 150px;
+    width: 125px;
     margin: 20px;
     display: flex;
     flex-direction: column;
@@ -156,8 +156,9 @@
 }
 
 .cardIconContainer {
-    width: 100px;
-    height: 100px;
+    width: 95px;
+    height: 95px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;

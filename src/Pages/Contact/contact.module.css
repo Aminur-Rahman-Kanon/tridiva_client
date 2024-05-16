@@ -1,29 +1,4 @@
-.container {
-    width: calc(100% - 300px);
-    margin: 100px auto 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.formContainer {
-    width: 100%;
-    margin: 50px auto;
-    padding: 20px 0;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.headerContainer {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
+/* element styling */
 
 .headerWhite {
     font-size: 2.2rem;
@@ -33,7 +8,6 @@
     margin: 5px 0;
 }
 
-
 .textWhite {
     width: 100%;
     display: block;
@@ -41,6 +15,169 @@
     font-weight: 400;
     color: white;
     margin: 5px 0;
+}
+
+.headingWhiteLarge {
+    font-size: 2reem;
+    font-weight: 500;
+    color: white;
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+
+/* wrapper styling */
+.container {
+    width: 100%;
+    margin: 100px auto 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quoteContainer {
+    width: calc(100% - 150px);
+    max-width: 1800px;
+    margin: 150px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    position: relative;
+    width: calc(100% - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(68, 68, 68);
+}
+
+.cornerTop {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 200px;
+    height: 200px;
+    background-image: url('../../Assets/quote/border_green.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.cornerBottom {
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    width: 200px;
+    height: 200px;
+    background-image: url('../../Assets/quote/border_blue.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+}
+
+.bgWrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.bgImgContainer {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    /* transform: translate(-5%, -5%); */
+    width: 45%;
+    height: 600px;
+    /* padding-left: 50px; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url('../../Assets/quote/quote_bg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgImg {
+    width: 100%;
+    display: none;
+}
+
+.formContainer {
+    width: 45%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.formWrapper {
+    width: 100%;
+    /* padding: 20px; */
+    padding-right: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.inputContainer {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textareaContainer {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textarea {
+    width: 100%;
+    height: auto;
+    font-family: inherit;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.headerContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .el5TextWhite {
@@ -112,18 +249,6 @@
     color: rgb(32, 32, 32);
 }
 
-.formWrapper {
-    width: 45%;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    background-color: #4e4e4e;
-}
-
 .inputWrapper {
     width: 100%;
     height: 40px;
@@ -188,48 +313,9 @@
     color: white;
 }
 
-.submitBtn {
-    position: relative;
-    width: 175px;
-    height: 40px;
-    border: 1px solid #0da03e;
-    background-color: transparent;
-    color: #0da03e;
-    border-radius: 5px;
-    margin: 10px 0;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.btnSlider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: #0da03e;
-    transition: width 0.5s ease;
-}
-
-.btnText {
-    font-size: 0.9rem;
-    transition: color 0.5s ease;
-    z-index: 1;
-    text-transform: capitalize;
-}
-
-.submitBtn:hover .btnSlider {
-    width: 100%;
-}
-
-.submitBtn:hover .btnText {
-    color: white;
-}
-
 .element5Container {
+    width: calc(100% - 300px);
+    max-width: 1800px;
     margin: 50px auto;
     display: flex;
     flex-direction: column;
@@ -291,8 +377,55 @@
     width: 100%;
 }
 
+.linkGreen {
+    position: relative;
+    width: 200px;
+    height: 40px;
+    margin: 20px 0;
+    border: 1px solid #0da03e;
+    background-color: transparent;
+    color: #0da03e;
+    font-size: 0.9rem;
+    /* border-radius: 5px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.linkGreenSlider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: #0da03e;
+    width: 0;
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+.linkGreenText {
+    z-index: 1;
+    text-transform: capitalize;
+}
+
+.linkGreen:hover {
+    color: white;
+}
+
+.linkGreen:hover .linkGreenSlider {
+    width: 100%;
+}
+
 @media (max-width: 1023px) {
-    .container {
+
+    .quoteContainer {
+        width: calc(100% - 75px);
+        margin: 50px auto 100px;
+    }
+
+    .element5Container {
         width: calc(100% - 150px);
     }
 
@@ -304,10 +437,40 @@
         width: 100%;
         margin: 50px auto;
     }
+
+    .bgWrapper {
+        flex-direction: column;
+    }
+
+    .bgImgContainer {
+        position: static;
+        height: auto;
+        width: 100%;
+    }
+
+    .bgImg {
+        display: block;
+    }
+
+    .formContainer {
+        width: 100%;
+        align-items: center;
+    }
+
+    .formWrapper {
+        align-items: center;
+        padding-right: unset;
+        padding: 20px;
+        margin: 10px auto;
+    }
 }
 
 @media (max-width: 767px) {
-    .container {
+    .quoteContainer {
+        width: calc(100% - 37.5px);
+    }
+
+    .element5Container {
         width: calc(100% - 75px);
     }
 
@@ -343,10 +506,33 @@
     .textWhite {
         text-align: center;
     }
+
+    .linkGreen {
+        width: 100%;
+        background-color: #0da03e;
+    }
+
+    .linkGreenText {
+        color: white;
+    }
 }
 
 @media (max-width: 450px) {
-    .container {
-        width: calc(100% - 37.5px);
+    .quoteContainer {
+        width: 100%;
+    }
+
+    .cornerBottom {
+        bottom: -10px;
+        left: -10px;
+    }
+
+    .cornerTop {
+        top: -10px;
+        right: -10px;
+    }
+
+    .formWrapper {
+        padding: 5px;
     }
 }

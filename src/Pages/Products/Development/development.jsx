@@ -255,7 +255,7 @@ const Development = () => {
                 <span className={styles.el6TextWhite}>TRIDIVA IT is proud to offer low price flexible payment options that are unbeatable in inustries. Besides, we have
                 several payment options that will help you choose the best option that fit your need. Whether you choose one-of payment or pay monthly, our price range are guaranteed
                 to make you happy. And in case, if you are not happy then you can leave us anytime. See our terms & Condions for more details.</span>
-                <Link to={''} className={styles.linkGreen}>
+                <Link to={'/pricing'} className={styles.linkGreen}>
                     <span className={styles.linkGreenSlider}></span>
                     <span className={styles.linkText}>go to pricing</span>
                 </Link>

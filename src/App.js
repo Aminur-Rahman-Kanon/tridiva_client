@@ -19,8 +19,6 @@ function App() {
       setSidedrawer((sidedrawer) => !sidedrawer);
     }
 
-    console.log(sidedrawer);
-
     return (
       <div className="App">
         <ContextApi.Provider value={{sidedrawer, toggleSidedrawer}}>

@@ -110,7 +110,7 @@ const Pricing = () => {
                         <span className={styles.priceEl3}>14.99</span>
                         <span className={styles.priceEl2}>/month</span>
                     </div>
-                    <span className={styles.textSmall}>Based on £79.88 yearly</span>
+                    <span className={styles.textSmall}>Based on £179.88 yearly</span>
                     <ul className={styles.listContainer}>
                         <li className={styles.list}>
                             <span className={styles.item}>
