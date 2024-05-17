@@ -306,6 +306,28 @@
         width: calc(100% - 75px);
         margin: 25px auto
     }
+
+    .linkBlue {
+        width: 100%;
+        background-color: #0099c2;
+    }
+
+    .linkText {
+        color: white;
+    }
+
+    .linkGreen {
+        width: 100%;
+        background-color: #0da03e;
+    }
+
+    .btn {
+        background-color: #0da03e;
+    }
+
+    .btnText {
+        color: white;
+    }
 }
 
 @media (max-width: 555px) {

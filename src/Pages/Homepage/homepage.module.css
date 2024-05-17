@@ -351,9 +351,19 @@
 
     .introLink {
         width: 100%;
+        background-color: #0099c2;
+    }
+
+    .introLinkText {
+        color: white;
     }
 
     .outroLink {
         width: 100%;
+        background-color: #0da03e;
+    }
+
+    .outroLinkText {
+        color: white;
     }
 }

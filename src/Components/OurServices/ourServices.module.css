@@ -257,7 +257,27 @@
         margin: 20px auto;
     }
 
-    .linkBlue, .linkGreen {
+    .headingBlue, .headingGreen {
+        font-size: 1.5rem;
+    }
+
+    .linkGreen {
         width: calc(100% - 5px);
+        background-color: #0da03e;
+    }
+    
+    .linkGreenText {
+        color: white;
+        font-size: 0.8rem;
+    }
+
+    .linkBlue {
+        width: calc(100% - 5px);
+        background-color: #0099c2;
+    }
+
+    .linkBlueText {
+        color: white;
+        font-size: 0.8rem;
     }
 }
