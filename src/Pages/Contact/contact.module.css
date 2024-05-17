@@ -77,7 +77,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
-
 }
 
 .bgWrapper {
@@ -386,7 +385,7 @@
     background-color: transparent;
     color: #0da03e;
     font-size: 0.9rem;
-    /* border-radius: 5px; */
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -153,7 +153,7 @@ const Pricing = () => {
                 <h3 className={styles.headerSmall}>looking for something else?</h3>
                 <h2 className={styles.headerWhiteLarge}>are you looking for someone to build a professional website for your company or youeself?</h2>
                 <h3 className={styles.headerSmall}>we got you covered. our talented professional team are always ready for you here</h3>
-                <Link to={''} className={styles.linkBlue}>
+                <Link to={'/contact'} className={styles.linkBlue}>
                     <span className={styles.linkBlueSlider}></span>
                     <span className={styles.linkText}>get a quote</span>
                 </Link>

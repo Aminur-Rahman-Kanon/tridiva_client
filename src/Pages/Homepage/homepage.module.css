@@ -50,7 +50,6 @@
     overflow: hidden;
     font-size: 2rem;
     max-height: 0;
-    opacity: 0;
     color: lightgray;
     letter-spacing: 1px;
     margin: 5px 0;
@@ -61,7 +60,6 @@
 
 .headingWhite.animate {
     max-height: 500px;
-    opacity: 1;
 }
 
 .textWhite {

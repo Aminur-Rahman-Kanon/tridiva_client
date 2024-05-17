@@ -182,7 +182,7 @@ const Development = () => {
                             <div className={styles.iconContainer}>
                                 <img src={angular} alt="angular" className={styles.icon} />
                             </div>
-                            <span className={styles.cardText}>html</span>
+                            <span className={styles.cardText}>angular</span>
                         </div>
                     </div>
                 </div>
@@ -244,7 +244,7 @@ const Development = () => {
                 <h3 className={styles.headerWhiteSmall}>get a qoute for your website</h3>
                 <h2 className={styles.headerWhiteLarge}>are you looking for someone to build a professional website for your company or youeself?</h2>
                 <h3 className={styles.headerWhiteSmall}>we got you covered. our talented professional team are always ready for you here</h3>
-                <Link to={''} className={styles.linkBlue}>
+                <Link to={'/contact'} className={styles.linkBlue}>
                     <span className={styles.linkBlueSlider}></span>
                     <span className={styles.linkText}>get a quote</span>
                 </Link>

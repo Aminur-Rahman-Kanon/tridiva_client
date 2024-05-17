@@ -4,9 +4,9 @@ import logo from '../../Assets/Logo/logo.png';
 
 const Logo = () => {
     return (
-        <div className={styles.logoContainer}>
+        <a href="/" className={styles.logoContainer}>
             <img src={logo} alt="tridiva it" className={styles.img}/>
-        </div>
+        </a>
     )
 }
 
