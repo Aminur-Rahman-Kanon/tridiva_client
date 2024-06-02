@@ -17,28 +17,28 @@ const Pricing = () => {
                     <h2 className={styles.cardHeader}>Basic</h2>
                     <div className={styles.priceWrapper}>
                         <span className={styles.priceEl1}>£</span>
-                        <span className={styles.priceEl3}>10.99</span>
+                        <span className={styles.priceEl3}>30</span>
                         <span className={styles.priceEl2}>/month</span>
                     </div>
-                    <span className={styles.textSmall}>Based on £131.88 yearly</span>
+                    <span className={styles.textSmall}>Based on £360 yearly</span>
                     <ul className={styles.listContainer}>
                         <li className={styles.list}>
                             <span className={styles.item}>
                                 <FontAwesomeIcon icon={faCheck} className={styles.icon}/>
                             </span>
-                            <span className={styles.text}>50GB disk space</span>
+                            <span className={styles.text}>10GB disk space</span>
                         </li>
                         <li className={styles.list}>
                             <span className={styles.item}>
                                 <FontAwesomeIcon icon={faCheck} className={styles.icon}/>
                             </span>
-                            <span className={styles.text}>50GB Bandwidth</span>
+                            <span className={styles.text}>20GB Bandwidth</span>
                         </li>
                         <li className={styles.list}>
                             <span className={styles.item}>
                                 <FontAwesomeIcon icon={faCheck} className={styles.icon}/>
                             </span>
-                            <span className={styles.text}>20 Email Address</span>
+                            <span className={styles.text}>2 Email Address</span>
                         </li>
                         <li className={styles.list}>
                             <span className={styles.item}>
@@ -62,16 +62,16 @@ const Pricing = () => {
                     <h2 className={styles.cardHeader}>Comprehensive</h2>
                     <div className={styles.priceWrapper}>
                         <span className={styles.priceEl1}>£</span>
-                        <span className={styles.priceEl3}>12.49</span>
-                        <span className={styles.priceEl2}>/month</span>
+                        <span className={styles.priceEl3}>500</span>
+                        <span className={styles.priceEl2}>/year</span>
                     </div>
-                    <span className={styles.textSmall}>Based on £149.88 yearly</span>
+                    {/* <span className={styles.textSmall}>Based on £149.88 yearly</span> */}
                     <ul className={styles.listContainer}>
                         <li className={styles.list}>
                             <span className={styles.item}>
                                 <FontAwesomeIcon icon={faCheck} className={styles.icon}/>
                             </span>
-                            <span className={styles.text}>50GB disk space</span>
+                            <span className={styles.text}>20GB disk space</span>
                         </li>
                         <li className={styles.list}>
                             <span className={styles.item}>
@@ -83,7 +83,7 @@ const Pricing = () => {
                             <span className={styles.item}>
                                 <FontAwesomeIcon icon={faCheck} className={styles.icon}/>
                             </span>
-                            <span className={styles.text}>20 Email Address</span>
+                            <span className={styles.text}>10 Email Address</span>
                         </li>
                         <li className={styles.list}>
                             <span className={styles.item}>
@@ -106,12 +106,13 @@ const Pricing = () => {
                 <div className={styles.card}>
                     <h2 className={styles.cardHeader}>Exclusive</h2>
                     <div className={styles.priceWrapper}>
-                        <span className={styles.priceEl1}>£</span>
-                        <span className={styles.priceEl3}>14.99</span>
-                        <span className={styles.priceEl2}>/month</span>
+                        <span className={styles.priceEl1}>Not sure what you looking for</span>
+                        {/* <span className={styles.priceEl3}>Talk to our expert</span>
+                        <span className={styles.priceEl2}>Our experts are always ready to help you</span> */}
                     </div>
-                    <span className={styles.textSmall}>Based on £179.88 yearly</span>
-                    <ul className={styles.listContainer}>
+                    <span className={styles.textSmall}>Talk with our experts</span>
+                    <span className={styles.textSmall}>Our experts are always here to help you</span>
+                    {/* <ul className={styles.listContainer}>
                         <li className={styles.list}>
                             <span className={styles.item}>
                                 <FontAwesomeIcon icon={faCheck} className={styles.icon}/>
@@ -142,11 +143,11 @@ const Pricing = () => {
                             </span>
                             <span className={styles.text}>Maintenance</span>
                         </li>
-                    </ul>
-                    <button className={styles.btn}>
+                    </ul> */}
+                    <a href="/contact" className={styles.btn}>
                         <span className={styles.btnSlider}></span>
-                        <span className={styles.btnText}>Choose Plan</span>
-                    </button>
+                        <span className={styles.btnText}>Lets's Talk</span>
+                    </a>
                 </div>
             </div>
             <div className={styles.element5Container}>

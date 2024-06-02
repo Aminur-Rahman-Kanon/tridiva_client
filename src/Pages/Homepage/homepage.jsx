@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styles from './homepage.module.css';
-import banner from '../../Assets/videos/banner1.mp4';
+import banner from '../../Assets/videos/banner.mp4';
 import { Link } from 'react-router-dom';
 import introBg from '../../Assets/others/intro_bg.jpg';
 import outroBg from '../../Assets/others/outro_bg.jpg';
