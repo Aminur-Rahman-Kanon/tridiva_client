@@ -93,7 +93,7 @@ const Pricing = () => {
                         </li>
                         <li className={styles.list}>
                             <span className={styles.item}>
-                                <FontAwesomeIcon icon={faX} className={styles.icon}/>
+                                <FontAwesomeIcon icon={faCheck} className={styles.icon}/>
                             </span>
                             <span className={styles.text}>Maintenance</span>
                         </li>
