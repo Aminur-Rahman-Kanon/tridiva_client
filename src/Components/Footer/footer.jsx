@@ -25,7 +25,7 @@ const Footer = () => {
                         <span className={styles.iconContainer}>
                             <FontAwesomeIcon icon={faEnvelope} className={styles.icon}/>
                         </span>
-                        <span className={styles.text}>acharjee@tridivait.co.uk</span>
+                        <span className={styles.text}>info@tridivait.co.uk</span>
                     </a>
                     <a href="tel:+447875531847" className={styles.item}>
                         <span className={styles.iconContainer}>
