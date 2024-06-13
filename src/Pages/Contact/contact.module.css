@@ -393,6 +393,11 @@
     transition: color 0.5s ease;
 }
 
+.linkGreen:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
 .linkGreenSlider {
     position: absolute;
     top: 0;
@@ -415,6 +420,43 @@
 
 .linkGreen:hover .linkGreenSlider {
     width: 100%;
+}
+
+.statusContainer {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerBlack {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: lightgray;
+}
+
+.textBlack {
+  font-size: 14px;
+  color: white;
+  margin: 10px 0;
+}
+
+.statusBtn {
+  width: 300px;
+  height: 40px;
+  cursor: pointer;
+  margin: 10px 0;
+  font-style: 14px;
+  background-color: lightgray;
+  color: black;
+  transition:  all 0.7s linear;
+}
+
+.statusBtn:hover {
+  background-color: white;
 }
 
 @media (max-width: 1023px) {
@@ -481,7 +523,7 @@
     .phoneLinkContainer {
         justify-content: center;
     }
-    
+
     .formContainer {
         margin: 25px auto;
     }
@@ -521,6 +563,10 @@
 
     .linkGreenText {
         color: white;
+    }
+
+    .statusBtn {
+      width: 100%;
     }
 }
 

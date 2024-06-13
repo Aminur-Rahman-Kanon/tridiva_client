@@ -1,12 +1,93 @@
-import React from "react";
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from 'react-router-dom';
 import styles from './contact.module.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faSpinner } from "@fortawesome/free-solid-svg-icons";
 import bg from '../../Assets/quote/quote_bg.jpg';
+import { servicesMsg } from '../../Data/data';
+import Modal from '../../Components/Modal/modal';
 
 const Contact = () => {
+    //destructuring query params as queryId
+    const { queryId }  = useParams();
+
+    //declaring local variables
+    const [name, setName] = useState('');
+    const [address, setAddress] = useState('');
+    const [phone, setPhone] = useState('');
+    const [service, setService] = useState('');
+    const [spinner, setSpinner] = useState(false);
+    const [modal, setModal] = useState(false);
+    const [status, setStatus] = useState('');
+    const [btnDisable, setBtnDisable] = useState(true);
+
+    //hooks to handles the query params in relation with setting servcices value automatically
+    useEffect(() => {
+      if (queryId){
+        const desiredService = servicesMsg[queryId];
+        setService(desiredService);
+      }
+    }, [queryId]);
+
+    useEffect(() => {
+      if (name && address && phone && service){
+        setBtnDisable(false);
+      }
+      else {
+        setBtnDisable(true);
+      }
+    }, [name, address, phone, service])
+
+    const querySubmitHandler = async (e) => {
+      e.preventDefault();
+      const data = JSON.stringify({ name, address, phone, service });
+
+      setSpinner(true);
+      await fetch('https://tridiva-server.onrender.com/service', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: data
+      }).then(res => res.json()).then(result => {
+        setSpinner(false);
+        if (result.status === 'success'){
+          setStatus('success');
+          setModal(true);
+        }
+      })
+      .catch(err => {
+        setSpinner(false);
+        setStatus('failed');
+        setModal(true);
+      });
+    }
+
+    let statusMsg;
+
+    if (status === 'success'){
+      statusMsg = <div className={styles.statusContainer}>
+        <h2 className={styles.headerBlack}>Your request has been sent.</h2>
+        <span className={styles.textBlack}>We will get back to you ASAP.</span>
+        <button className={styles.statusBtn} onClick={() => window.location.reload()}>Thank You</button>
+      </div>
+    }
+    else if (status === 'failed'){
+      statusMsg = <div className={styles.statusContainer}>
+        <h2 className={styles.headerBlack}>Something went wrong.</h2>
+        <span className={styles.textBlack}>Please try again.</span>
+        <button className={styles.statusBtn} onClick={() => {
+          setStatus('');
+          setModal(false);
+        }}>OK</button>
+      </div>
+    }
+
     return (
+        <>
+        <Modal modal={modal}>
+          {statusMsg}
+        </Modal>
         <div className={styles.container}>
             <div className={styles.quoteContainer}>
                 <div className={styles.wrapper}>
@@ -20,20 +101,37 @@ const Contact = () => {
                             <h2 className={styles.headingWhiteLarge}>get a quote</h2>
                             <form className={styles.formWrapper}>
                                 <div className={styles.inputContainer}>
-                                    <input type='text' placeholder="Full name" className={styles.input}/>
+                                    <input type='text'
+                                           placeholder="Full name"
+                                           className={styles.input}
+                                           onChange={ (e) => setName(e.target.value) }/>
                                 </div>
                                 <div className={styles.inputContainer}>
-                                    <input type='email' placeholder="Email address" className={styles.input}/>
+                                    <input type='email'
+                                           placeholder="Email address"
+                                           className={styles.input}
+                                           onChange={ (e) => setAddress(e.target.value) }/>
                                 </div>
                                 <div className={styles.inputContainer}>
-                                    <input type='number' placeholder="Phone number" className={styles.input}/>
+                                    <input type='number'
+                                           placeholder="Phone number"
+                                           className={styles.input}
+                                           onChange={ (e) => setPhone(e.target.value) }/>
                                 </div>
                                 <div className={styles.textareaContainer}>
-                                    <textarea rows={10} placeholder="What can we do for you today?" className={styles.textarea} />
+                                    <textarea rows={10} placeholder="What can we do for you today?"
+                                              value={service}
+                                              onChange={(e) => setService(e.target.value)}
+                                              className={styles.textarea} />
                                 </div>
-                                <button className={styles.linkGreen}>
+                                <button disabled={btnDisable} className={styles.linkGreen} onClick={ querySubmitHandler }>
                                     <span className={styles.linkGreenSlider}></span>
-                                    <span className={styles.linkGreenText}>submit query</span>
+                                    <span className={styles.linkGreenText}>{spinner ?
+                                      <FontAwesomeIcon icon={faSpinner} spinPulse className={styles.btnSpinner} />
+                                      :
+                                      'Submit Query'
+                                    }
+                                    </span>
                                 </button>
                             </form>
                         </div>
@@ -61,6 +159,7 @@ const Contact = () => {
                 </Link>
             </div>
         </div>
+        </>
     )
 }
 

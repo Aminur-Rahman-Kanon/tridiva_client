@@ -35,6 +35,9 @@ function App() {
             <Route path='/contact' element={<Suspense fallback={<Spinner load={true} />}>
               <Contact />
             </Suspense>}/>
+            <Route path='/contact/:queryId' element={<Suspense fallback={<Spinner load={true}/>}>
+              <Contact />
+            </Suspense>}/>
           </Routes>
           <Footer />
         </ContextApi.Provider>

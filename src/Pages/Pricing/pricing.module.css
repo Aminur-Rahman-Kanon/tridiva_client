@@ -38,6 +38,14 @@
     overflow: hidden;
 }
 
+.textMedium {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  margin: 10px 0;
+  text-align: center;
+}
+
 .card {
     /* width: 300px; */
     width: 100%;
@@ -287,7 +295,7 @@
 
 @media (max-width: 1023px) {
     .pricingWrapper {
-        width: calc(100% - 150px);       
+        width: calc(100% - 150px);
     }
 
     .element5Container {
