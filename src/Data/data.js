@@ -37,5 +37,5 @@ export const testimonial = [
 export const servicesMsg = {
   monthly: 'I would like to go for monthly payment option.',
   yearly: 'I would like to go for yearly payment option.',
-  others: 'I need a custome site and I would like to discuss with an experts please.'
+  others: 'I need a custome site and I would like to discuss with an experts please to create my own plan.'
 }

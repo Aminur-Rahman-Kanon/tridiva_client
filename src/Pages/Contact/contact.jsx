@@ -16,6 +16,7 @@ const Contact = () => {
     const [address, setAddress] = useState('');
     const [phone, setPhone] = useState('');
     const [service, setService] = useState('');
+    const [attachment, setAttachment] = useState(null);
     const [spinner, setSpinner] = useState(false);
     const [modal, setModal] = useState(false);
     const [status, setStatus] = useState('');
@@ -40,15 +41,20 @@ const Contact = () => {
 
     const querySubmitHandler = async (e) => {
       e.preventDefault();
+      const formData = new FormData();
+      
+      if (attachment){
+        formData.append('attachment', attachment);
+      }
+
       const data = JSON.stringify({ name, address, phone, service });
+
+      formData.append('data', data);
 
       setSpinner(true);
       await fetch('https://tridiva-server.onrender.com/service', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: data
+        body: formData
       }).then(res => res.json()).then(result => {
         setSpinner(false);
         if (result.status === 'success'){
@@ -83,6 +89,8 @@ const Contact = () => {
       </div>
     }
 
+    console.log(attachment);
+
     return (
         <>
         <Modal modal={modal}>
@@ -103,17 +111,20 @@ const Contact = () => {
                                 <div className={styles.inputContainer}>
                                     <input type='text'
                                            placeholder="Full name"
+                                           required
                                            className={styles.input}
                                            onChange={ (e) => setName(e.target.value) }/>
                                 </div>
                                 <div className={styles.inputContainer}>
                                     <input type='email'
                                            placeholder="Email address"
+                                           required
                                            className={styles.input}
                                            onChange={ (e) => setAddress(e.target.value) }/>
                                 </div>
                                 <div className={styles.inputContainer}>
                                     <input type='number'
+                                           required
                                            placeholder="Phone number"
                                            className={styles.input}
                                            onChange={ (e) => setPhone(e.target.value) }/>
@@ -124,15 +135,32 @@ const Contact = () => {
                                               onChange={(e) => setService(e.target.value)}
                                               className={styles.textarea} />
                                 </div>
-                                <button disabled={btnDisable} className={styles.linkGreen} onClick={ querySubmitHandler }>
-                                    <span className={styles.linkGreenSlider}></span>
-                                    <span className={styles.linkGreenText}>{spinner ?
-                                      <FontAwesomeIcon icon={faSpinner} spinPulse className={styles.btnSpinner} />
-                                      :
-                                      'Submit Query'
-                                    }
-                                    </span>
-                                </button>
+                                <div className={styles.fileInputContainer}>
+                                  <span className={styles.textSmallWhite}>If you have any plan to attach (Single image or pdf only)</span>
+                                  <div className={styles.inputContainer}>
+                                    <input type="file"
+                                           className={styles.input}
+                                           multiple={false}
+                                           name="attachment"
+                                           accept="image/*, application/pdf"
+                                           onChange={(e) => setAttachment(e.target.files[0])}/>
+                                  </div>
+                                </div>
+                                <div className={styles.btnGroup}>
+                                  <button disabled={btnDisable} className={styles.linkGreen} onClick={ querySubmitHandler }>
+                                      <span className={styles.linkGreenSlider}></span>
+                                      <span className={styles.linkGreenText}>{spinner ?
+                                        <FontAwesomeIcon icon={faSpinner} spinPulse className={styles.btnSpinner} />
+                                        :
+                                        'Submit Query'
+                                      }
+                                      </span>
+                                  </button>
+                                  <Link className={styles.linkBlue}>
+                                      <span className={styles.linkBlueSlider}></span>
+                                      <span className={styles.linkBlueText}>Go Back</span>
+                                  </Link>
+                                </div>
                             </form>
                         </div>
                     </div>

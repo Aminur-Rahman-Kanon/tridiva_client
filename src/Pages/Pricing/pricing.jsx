@@ -15,12 +15,12 @@ const Pricing = () => {
             <div className={styles.cardContainer}>
                 <div className={styles.card}>
                     <h2 className={styles.cardHeader}>Monthly Basis</h2>
+                    <span className={styles.textSmall}>Minimum 2 years of contract</span>
                     <div className={styles.priceWrapper}>
                         <span className={styles.priceEl1}>£</span>
                         <span className={styles.priceEl3}>30</span>
                         <span className={styles.priceEl2}>/month</span>
                     </div>
-                    <span className={styles.textSmall}>Minimum 2 years of contract</span>
                     <ul className={styles.listContainer}>
                         <li className={styles.list}>
                             <span className={styles.item}>
@@ -60,12 +60,12 @@ const Pricing = () => {
                 </div>
                 <div className={styles.card}>
                     <h2 className={styles.cardHeader}>One of Payment</h2>
+                    <span className={styles.textLarge}>From</span>
                     <div className={styles.priceWrapper}>
                         <span className={styles.priceEl1}>£</span>
                         <span className={styles.priceEl3}>500</span>
                         <span className={styles.priceEl2}>/year</span>
                     </div>
-                    <span className={styles.textSmall}>Starts from £500 per year</span>
                     <ul className={styles.listContainer}>
                         <li className={styles.list}>
                             <span className={styles.item}>
@@ -104,11 +104,11 @@ const Pricing = () => {
                     </Link>
                 </div>
                 <div className={styles.card}>
-                    <h2 className={styles.cardHeader}>Something Else</h2>
+                    <h2 className={styles.cardHeader}>Choose your own</h2>
                     <div className={styles.priceWrapper}>
                         <span className={styles.textMedium}>Want to design a custom site to fit your need?</span>
                     </div>
-                    <span className={styles.textSmall}>Please feel free to talk to our experts</span>
+                    <span className={styles.textSmall}>Please feel free to talk to our experts to create your own plan</span>
                     <span className={styles.textSmall}>We understand your need. Our friendly experts are always here to help you to satisfy your need.</span>
                     <Link to="/contact/others" className={styles.btn}>
                         <span className={styles.btnSlider}></span>

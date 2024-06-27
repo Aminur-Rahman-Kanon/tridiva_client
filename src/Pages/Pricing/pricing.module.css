@@ -46,6 +46,13 @@
   text-align: center;
 }
 
+.textLarge {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 20px auto;
+    color: white;
+}
+
 .card {
     /* width: 300px; */
     width: 100%;
