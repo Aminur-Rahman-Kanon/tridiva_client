@@ -360,7 +360,7 @@
 .linkBlue {
     position: relative;
     width: 100%;
-    max-width: 163px;
+    max-width: 175px;
     height: 38px;
     margin: 10px 0;
     border: 1px solid #0099c2;
@@ -405,12 +405,54 @@
     width: 100%;
 }
 
+.linkBlueSmall {
+    position: relative;
+    width: 100%;
+    max-width: 163px;
+    height: 38px;
+    margin: 10px 0;
+    border: 1px solid #0099c2;
+    background-color: transparent;
+    color: #0099c2;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.linkBlueSmallSlider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: #0099c2;
+    width: 0;
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+.linkBlueSmallText {
+    font-size: 0.9rem;
+    z-index: 1;
+    text-transform: capitalize;
+}
+
+.linkBlueSmall:hover {
+    color: white;
+}
+
+.linkBlueSmall:hover .linkBlueSmallSlider {
+    width: 100%;
+}
+
 .linkGreen {
     position: relative;
     width: 100%;
     padding: 0;
     box-sizing: border-box;
-    max-width: 165px;
+    max-width: 175px;
     height: 40px;
     margin: 10px 0;
     border: 1px solid #0da03e;
@@ -425,7 +467,7 @@
     transition: color 0.5s ease;
 }
 
-.linkGreen:disabled {
+.linkGreenSmall:disabled {
   opacity: 0.5;
   cursor: default;
 }
@@ -451,6 +493,50 @@
 }
 
 .linkGreen:hover .linkGreenSlider {
+    width: 100%;
+}
+
+.linkGreenSmall {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 165px;
+    height: 38px;
+    margin: 10px 0;
+    border: 1px solid #0da03e;
+    background-color: transparent;
+    color: #0da03e;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.linkGreenSmallSlider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: #0da03e;
+    width: 0;
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+.linkGreenSmallText {
+    z-index: 1;
+    text-transform: capitalize;
+}
+
+.linkGreenSmall:hover {
+    color: white;
+}
+
+.linkGreenSmall:hover .linkGreenSmallSlider {
     width: 100%;
 }
 

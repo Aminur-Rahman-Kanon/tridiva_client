@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import styles from './contact.module.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faSpinner } from "@fortawesome/free-solid-svg-icons";
@@ -10,6 +10,7 @@ import Modal from '../../Components/Modal/modal';
 const Contact = () => {
     //destructuring query params as queryId
     const { queryId }  = useParams();
+    const navigate = useNavigate();
 
     //declaring local variables
     const [name, setName] = useState('');
@@ -89,8 +90,6 @@ const Contact = () => {
       </div>
     }
 
-    console.log(attachment);
-
     return (
         <>
         <Modal modal={modal}>
@@ -147,19 +146,19 @@ const Contact = () => {
                                   </div>
                                 </div>
                                 <div className={styles.btnGroup}>
-                                  <button disabled={btnDisable} className={styles.linkGreen} onClick={ querySubmitHandler }>
-                                      <span className={styles.linkGreenSlider}></span>
-                                      <span className={styles.linkGreenText}>{spinner ?
+                                  <button disabled={btnDisable} className={styles.linkGreenSmall} onClick={ querySubmitHandler }>
+                                      <span className={styles.linkGreenSmallSlider}></span>
+                                      <span className={styles.linkGreenSmallText}>{spinner ?
                                         <FontAwesomeIcon icon={faSpinner} spinPulse className={styles.btnSpinner} />
                                         :
                                         'Submit Query'
                                       }
                                       </span>
                                   </button>
-                                  <Link className={styles.linkBlue}>
-                                      <span className={styles.linkBlueSlider}></span>
-                                      <span className={styles.linkBlueText}>Go Back</span>
-                                  </Link>
+                                  <button className={styles.linkBlueSmall} onClick={ () => navigate(-1) }>
+                                      <span className={styles.linkBlueSmallSlider}></span>
+                                      <span className={styles.linkBlueSmallText}>Go Back</span>
+                                  </button>
                                 </div>
                             </form>
                         </div>
@@ -181,8 +180,8 @@ const Contact = () => {
                 <h3 className={styles.el5TextWhite}>TRIDIVA IT pround to offer low price flexible payment options that are unbeatable in industries.
                 Besides, we have several payment options that will hep you choose the best options that will fit your need. Whether you choose one-off-payment or pay monthly, our price range are guaranteed to make you happy.
                 And in case, if you are not happy then yoy can leave us anytime. See our terms & conditions for more details.</h3>
-                <Link to={'/pricing'} className={styles.linkBlue}>
-                    <span className={styles.linkBlueSlider}></span>
+                <Link to={'/pricing'} className={styles.linkGreen}>
+                    <span className={styles.linkGreenSlider}></span>
                     <span className={styles.linkText}>go to pricing</span>
                 </Link>
             </div>
