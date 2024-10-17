@@ -99,6 +99,7 @@
     color: white;
     line-height: 1.5rem;
     font-weight: 400;
+    text-align: left;
 }
 
 .linkGreen {
@@ -238,9 +239,9 @@
         transform: translate(-50%, 0);
     }
 
-    .textWhite {
+    /* .textWhite {
         text-align: center;
-    }
+    } */
 }
 
 @media (max-width: 767px) {
